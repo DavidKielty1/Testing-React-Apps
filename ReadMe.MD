@@ -54,4 +54,8 @@ describe('description of category to which tests will belong e.g. <Greeting/> / 
 . put entire test here.
 })
 
+Components ->
+. Greeting.js
+. Greeting.test.js
+
 Put multiple tests in the describe function to group tests into Test Suites.
