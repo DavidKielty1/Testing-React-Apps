@@ -38,41 +38,37 @@ Create-react-app sets up and installs Jest and React Testing Library
 3. Assert - Compare execution results with expected results.
 
 _test, expect_\
-both globally available.
+both globally available functions.
 
 _render, screen_
 render the function/component\
 screen gives access to virtual DOM\
 screen.get gives error if not found.\
-screen.query won't; can check if something is not in the document - failed search is purpose.\
+screen.query won't -- can be used to check if something is not in the document/failed search is purpose.\
 screen.find will return a promise, if element is eventually on screen.
 
-**Test Suites**
+**Test Suites**\
 Organizing tests
 
 describe('description of category to which tests will belong e.g. <Greeting/> / 'Greeting Component', () => {
 . put entire test here.
 })
 
-Components ->\
-. Greeting.js\
-. Greeting.test.js
-
 Put multiple tests in the describe function to group tests into Test Suites.
 
-**testing async fetch code**
+**testing async fetch code**\
 screen.find functions return a promise.\
 test library will evaluate screen a couple of times until the find function succeeds.\
-test('renders . . .'), _async()_ => {\
-. Arrange\
+test('renders . . .' , _async()_ => {\
+1 Arrange\
 (render(<Async/>))\
-. Act - - -\
-. Assert\
+2 Act - - -\
+3 Assert\
 const element = _await_ screen.findByRole('listitem');\
 expect(element).not.toHaveLength(0);
-}
+})
 
-_Mock functions_
+_Mock functions_\
 We don't want to hammer server with HTTP requests thus we will create a mock function to test instead.\
 Rather than testing the fetch function, we will test whether the component itself is correctly sending\
 out the correct requests e.g. POST, GET, UPDATE, etc. Hitting the correct end points.
