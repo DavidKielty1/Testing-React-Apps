@@ -17,17 +17,17 @@ _End-to-End e2e tests_
 Testing entire scenarios as user would experience them - e.g. logging a user in, then going to a certain page.\
 Projects typically contain a few e2e tests
 
-_What to Test & How?_
-. What\
+_What to Test & How?_\
+1 What
 Small blocks, focused, test one thing\
-Reason for failure clear
+Reason for failure clear.
 
-. How
-Success and error cases which could occur, test rare results
+2 How
+Success and error cases which could occur, test rare results.
 
 _Required Tools & Setup_ - where and how do we write these test?\
-Tool for running our tests and asserting results - pass or fail. (pop. Jest)\
-In react app need a simulation for automatic tests to interact with them - simulate browser. (pop. React Testing Library)
+Jest - a tool for running our tests and asserting results - pass or fail. \
+React Testing Library - allows for a simulation of browser and automatic tests to interact with them.
 
 Create-react-app sets up and installs Jest and React Testing Library
 
@@ -37,7 +37,7 @@ Create-react-app sets up and installs Jest and React Testing Library
 2. Act - Run logic that should be tested (e.g. execute function, simulate button click etc.)\
 3. Assert - Compare execution results with expected results.
 
-_test, expect_
+_test, expect_\
 both globally available.
 
 _render, screen_
